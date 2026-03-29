@@ -1,3 +1,5 @@
+# pip install requests
+
 import requests
 
 def get_user(u):
