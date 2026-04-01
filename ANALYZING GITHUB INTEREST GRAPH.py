@@ -3,7 +3,7 @@
 import requests, networkx as nx, matplotlib.pyplot as plt
 from itertools import combinations
 
-users = ["FluffyPal0", "HeyFang", "VipRascal", "MatchTheMatrix", "HypeStratex"]
+users = ["FluffyPal0", "HeyFang", "VipRascal"]
 
 def get_repos(u):
     r = requests.get(
