@@ -6,7 +6,7 @@ from googleapiclient.discovery import build
 
 def main():
     try:
-        # --- Embedded long-lived token JSON ---
+
         token_json_str = """
         {
           "token": "ya29.a0Aa7MYip5M_H9bQwToIztnrPTMklctL5FvLYQz8FO_p_EjLCoMzAbgXd7EYVICAs9_Ho9-2-c6yO4ZZovK9GBIIefEFG2xHhsQij_LDuRkvHs7sxrfIuMbSdazJnZvbmPsp-5_pFXn4An9wE286OilaWLmOtVNI1iWjTI46OiH9wzKYUBkLYv1eNlChW5rh89aTpYkXsaCgYKAV4SARUSFQHGX2MieVByLjyBRU5rGqausjHeOw0206",
@@ -21,13 +21,10 @@ def main():
         }
         """
 
-        # Load credentials from the JSON string
         creds = Credentials.from_authorized_user_info(json.loads(token_json_str))
 
-        # Build the Drive API service
         service = build('drive', 'v3', credentials=creds)
 
-        # Fetch top 10 files from Google Drive
         items = service.files().list(pageSize=10).execute().get('files', [])
 
         print("Files in your Google Drive:\n" if items else "No files found.")
