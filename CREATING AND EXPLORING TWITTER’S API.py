@@ -15,7 +15,6 @@ def get_user(k, ks, t, ts):
     else:
         print("Error:", r.status_code, r.text)
 
-# credentials
 api_key = "LMwvRn4KV2qWwNI7ZhyWLNIhw"
 api_secret_key = "nB324r6e4Rz19LsFJPbBYnCEwWw8VcLatTlAtV05v7K7oQykrP"
 access_token = "2008441416264151040-WQ4bgM1DzpcYKWO5SsTzsFr33gAZ55"
